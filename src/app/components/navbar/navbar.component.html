@@ -1,11 +1,31 @@
-<nav class="bg-gray-900 text-white p-4 fixed w-full top-0 shadow-md">
+<nav
+  class="bg-gray-900 text-white p-4 fixed w-full top-0 shadow-md dark:bg-gray-100 dark:text-gray-900"
+>
   <div class="container mx-auto flex justify-between items-center">
     <a class="text-xl font-bold" routerLink="/">Ajayy</a>
     <div>
-      <a class="mx-2 hover:text-gray-400" routerLink="/">Home</a>
-      <a class="mx-2 hover:text-gray-400" routerLink="/about">About</a>
-      <a class="mx-2 hover:text-gray-400" routerLink="/projects">Projects</a>
-      <a class="mx-2 hover:text-gray-400" routerLink="/contact">Contact</a>
+      <a class="mx-2 hover:text-gray-400 dark:hover:text-gray-600" href="#home"
+        >Home</a
+      >
+      <a class="mx-2 hover:text-gray-400 dark:hover:text-gray-600" href="#about"
+        >About</a
+      >
+      <a
+        class="mx-2 hover:text-gray-400 dark:hover:text-gray-600"
+        href="#projects"
+        >Projects</a
+      >
+      <a
+        class="mx-2 hover:text-gray-400 dark:hover:text-gray-600"
+        href="#contact"
+        >Contact</a
+      >
+      <button
+        (click)="toggleTheme()"
+        class="ml-4 p-2 rounded bg-gray-700 text-white dark:bg-gray-300 dark:text-black"
+      >
+        🌙 | ☀️
+      </button>
     </div>
   </div>
 </nav>

@@ -1,8 +1,33 @@
 <app-navbar></app-navbar>
 
-<!-- Page Content -->
 <div class="pt-16">
-  <router-outlet></router-outlet>
+  <section
+    id="home"
+    class="h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900"
+  >
+    <app-home></app-home>
+  </section>
+
+  <section
+    id="about"
+    class="h-screen flex items-center justify-center bg-white dark:bg-gray-800"
+  >
+    <app-about></app-about>
+  </section>
+
+  <section
+    id="projects"
+    class="h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900"
+  >
+    <app-projects></app-projects>
+  </section>
+
+  <section
+    id="contact"
+    class="h-screen flex items-center justify-center bg-white dark:bg-gray-800"
+  >
+    <app-contact></app-contact>
+  </section>
 </div>
 
 <app-footer></app-footer>
