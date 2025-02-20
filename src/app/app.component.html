@@ -1,9 +1,13 @@
-<app-navbar></app-navbar>
+<!-- Navbar -->
+<header class="relative z-50">
+  <app-navbar></app-navbar>
+</header>
 
-<div class="pt-16">
+<!-- Main Content (Hero + Other Sections) -->
+<main class="relative">
   <section
     id="home"
-    class="h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900"
+    class="relative h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900"
   >
     <app-home></app-home>
   </section>
@@ -28,6 +32,6 @@
   >
     <app-contact></app-contact>
   </section>
-</div>
+</main>
 
 <app-footer></app-footer>

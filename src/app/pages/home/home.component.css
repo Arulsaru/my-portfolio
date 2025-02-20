@@ -1,0 +1,55 @@
+section {
+  position: relative;
+  background-size: contain;  /* Ensure the entire image fits */
+  background-position: left top;  /* Align to the top-left */
+  background-repeat: no-repeat;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5rem 2rem;
+  overflow: hidden; /* Prevents any unwanted cropping */
+}
+
+
+h1 {
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Applied to Tailwind classes */
+.animate-slideIn {
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
