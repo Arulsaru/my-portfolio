@@ -1,7 +1,7 @@
 # 🌟 My Portfolio - Arulmozhi Karunagaran
 
 🚀 **Welcome to my personal portfolio!**  
-This is my portfolio website built with **Angular** and **Tailwind CSS**, showcasing my skills, projects, and experience.
+This is my portfolio website built with **Angular** and **Tailwind CSS**, showcasing my skills, experiences, and certifications.
 
 ---
 

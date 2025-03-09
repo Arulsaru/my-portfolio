@@ -1,0 +1,78 @@
+<section
+  id="experience"
+  class="py-16 px-6 md:px-10 lg:px-10 bg-white dark:bg-gray-900"
+>
+  <div
+    class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+  >
+    <!-- Left Side: Title, Intro & Experience Card -->
+    <div>
+      <h2
+        class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-200 mb-7"
+      >
+        📌 Experience
+      </h2>
+      <p
+        class="text-md md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-7"
+      >
+        An overview of my work experience, Click on each role to view the impact
+        I made.
+      </p>
+
+      <!-- Company Name with Logo -->
+      <div class="mt-4 flex items-center gap-3">
+        <img
+          src="/assets/trustrace-logo.png"
+          alt="TrusTrace Logo"
+          class="w-8 h-8"
+        />
+        <h3 class="text-2xl font-semibold text-gray-900 dark:text-gray-200">
+          TrusTrace
+        </h3>
+      </div>
+
+      <!-- Experience Card (Left Side) -->
+      <div class="mt-6">
+        <p
+          class="text-md md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-7"
+        >
+          TrusTrace is a traceability and compliance data management platform
+          that automates the collection and validation of real-time granular
+          data direct from the supplier network on how products have been made.
+        </p>
+        <div class="tabs flex flex-wrap gap-3">
+          @for (role of experiences; track role) {
+          <button
+            (click)="selectedIndex = experiences.indexOf(role)"
+            [class.active]="selectedIndex === experiences.indexOf(role)"
+            class="chip"
+          >
+            {{ role.title }}
+          </button>
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side: Experience Details (Centered Vertically) -->
+    <div
+      class="card bg-gray-100 dark:bg-gray-800 p-5 rounded-lg shadow-md mt-16"
+    >
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-300">
+        {{ experiences[selectedIndex].title }}
+      </h3>
+      <p class="text-sm text-gray-600 dark:text-gray-400">
+        {{ experiences[selectedIndex].duration }}
+      </p>
+
+      <!-- Unordered List for Bullet Points -->
+      <ul
+        class="list-disc list-inside mt-3 text-md text-gray-700 dark:text-gray-300"
+      >
+        @for (point of experiences[selectedIndex].description; track point) {
+        <li>{{ point }}</li>
+        }
+      </ul>
+    </div>
+  </div>
+</section>

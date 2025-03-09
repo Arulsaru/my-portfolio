@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { ProjectsComponent } from './pages/projects/projects.component';
+import { ExperiencesComponent } from './pages/experiences/experiences.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 
@@ -15,7 +15,7 @@ import { AboutComponent } from './pages/about/about.component';
     NavbarComponent,
     FooterComponent,
     ContactComponent,
-    ProjectsComponent,
+    ExperiencesComponent,
     HomeComponent,
     AboutComponent,
   ],
