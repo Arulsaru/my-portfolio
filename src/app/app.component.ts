@@ -6,6 +6,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ExperiencesComponent } from './pages/experiences/experiences.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
+import { CertificationsComponent } from './pages/certifications/certifications.component';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ import { AboutComponent } from './pages/about/about.component';
     ExperiencesComponent,
     HomeComponent,
     AboutComponent,
+    CertificationsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
