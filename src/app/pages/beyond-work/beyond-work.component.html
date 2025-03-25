@@ -1,0 +1,213 @@
+<section
+  id="beyond-work"
+  class="py-16 px-6 md:px-10 lg:px-10 bg-white dark:bg-gray-900 text-black dark:text-white"
+>
+  <div
+    class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+  >
+    <!-- Left Side: Section Intro & Buttons -->
+    <div>
+      <h2
+        class="text-3xl md:text-4xl font-bold text-black dark:text-white mb-4"
+      >
+        🚀 Beyond Work
+      </h2>
+      <p
+        class="text-md md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mt-10"
+      >
+        Beyond just coding, I constantly strive to expand my knowledge, improve
+        my problem-solving skills, and refine my ability to collaborate
+        effectively. This section highlights my professional profiles, technical
+        blogs, key strengths, and essential soft skills that help me grow as a
+        developer and team player...
+      </p>
+
+      <!-- Instructional Text -->
+      <p class="text-sm text-gray-700 dark:text-gray-300 mt-4 italic">
+        Click on each sections to view the details.
+      </p>
+
+      <!-- Buttons to Switch Tabs -->
+      <div class="flex flex-wrap gap-4 mt-12 text-black dark:text-black">
+        <button
+          class="tab-button"
+          [class.active]="activeTab === 'profiles'"
+          (click)="activeTab = 'profiles'"
+        >
+          🌟 Profiles
+        </button>
+        <button
+          class="tab-button"
+          [class.active]="activeTab === 'blogs'"
+          (click)="activeTab = 'blogs'"
+        >
+          📝 Blogs
+        </button>
+        <button
+          class="tab-button"
+          [class.active]="activeTab === 'strengths'"
+          (click)="activeTab = 'strengths'"
+        >
+          💪 Strengths
+        </button>
+        <button
+          class="tab-button"
+          [class.active]="activeTab === 'softSkills'"
+          (click)="activeTab = 'softSkills'"
+        >
+          🤝 Soft Skills
+        </button>
+      </div>
+    </div>
+
+    <!-- Right Side: Tab Content -->
+    <div class="tab-content">
+      <!-- Profiles Section -->
+      <div *ngIf="activeTab === 'profiles'" class="fade-in">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div
+            *ngFor="let profile of profiles"
+            class="profile-card bg-gray-100 dark:bg-gray-800"
+          >
+            <div class="flex items-center gap-4">
+              <img
+                [src]="profile.icon"
+                alt="{{ profile.name }}"
+                class="profile-icon"
+              />
+              <div>
+                <h3 class="text-lg font-semibold">
+                  {{ profile.name }}
+                </h3>
+                <a
+                  [href]="profile.link"
+                  target="_blank"
+                  class="profile-link text-blue-600 dark:text-sky-400"
+                  >Visit →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blogs Section -->
+      <div *ngIf="activeTab === 'blogs'" class="fade-in">
+        <div class="relative">
+          <div
+            class="absolute top-1/2 right-[5px] -translate-y-1/2 flex flex-col gap-3 z-10 up-down-btn"
+          >
+            <!-- Scroll Up Button -->
+            <button
+              (click)="scrollBlogs('up')"
+              class="bg-gray-200 dark:bg-gray-800 p-3 rounded-full shadow hover:bg-gray-300 dark:hover:bg-gray-700 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 text-gray-800 dark:text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 15l7-7 7 7"
+                />
+              </svg>
+            </button>
+
+            <!-- Scroll Down Button -->
+            <button
+              (click)="scrollBlogs('down')"
+              class="bg-gray-200 dark:bg-gray-800 p-3 rounded-full shadow hover:bg-gray-300 dark:hover:bg-gray-700 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 text-gray-800 dark:text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Scrollable Blog Grid (scrollbar hidden) -->
+          <div
+            #scrollContainer
+            class="max-h-[450px] overflow-y-scroll pr-4 scroll-smooth no-scrollbar"
+          >
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div
+                *ngFor="let blog of blogs"
+                class="p-5 bg-white dark:bg-gray-800 rounded-xl shadow-md transition-transform hover:scale-105"
+              >
+                <h3 class="text-lg font-bold text-gray-800 dark:text-gray-100">
+                  {{ blog.title }}
+                </h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                  {{ blog.summary }}
+                </p>
+                <a
+                  [href]="blog.link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-blue-600 dark:text-blue-400 mt-4 inline-block font-medium hover:underline"
+                >
+                  Read More →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Strengths -->
+      <div *ngIf="activeTab === 'strengths'" class="fade-in">
+        <!-- <h3 class="text-xl font-bold mb-4">💪 Strengths</h3> -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <div
+            *ngFor="let strength of strengths"
+            class="rounded-lg p-4 bg-gray-100 dark:bg-gray-800 shadow-md hover:scale-105 transition-transform duration-300 text-center"
+          >
+            <img
+              [src]="strength.icon"
+              alt="{{ strength.name }}"
+              class="w-6 h-6 mx-auto mb-2"
+            />
+            <p class="text-sm font-medium text-gray-800 dark:text-gray-100">
+              {{ strength.name }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soft Skills -->
+      <div *ngIf="activeTab === 'softSkills'" class="fade-in">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <div
+            *ngFor="let skill of softSkills"
+            class="rounded-lg p-4 bg-gray-100 dark:bg-gray-800 shadow-md hover:scale-105 transition-transform duration-300 text-center"
+          >
+            <img
+              [src]="skill.icon"
+              alt="{{ skill.name }}"
+              class="w-6 h-6 mx-auto mb-2"
+            />
+            <p class="text-sm font-medium text-gray-800 dark:text-gray-100">
+              {{ skill.name }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
