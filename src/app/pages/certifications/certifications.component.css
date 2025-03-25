@@ -40,20 +40,20 @@
   flex: 0 0 auto;
   width: 280px;
   text-align: center;
-  background: #f3f4f6;
+  /* background: #f3f4f6; */
   padding: 12px;
-  border-radius: 8px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  /* border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); */
   transition: transform 0.3s ease-in-out;
 }
 
 .dark .cert-card {
-  background: #1f2937;
+  background: rgb(31 41 55 / var(--tw-bg-opacity, 1));
 }
 
 /* Hover Effect */
 .cert-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.10);
 }
 
 /* Infinite Scrolling Animation */
@@ -99,7 +99,7 @@
   pointer-events: none;
 }
 
-.relative.overflow-hidden::before {
+/* .relative.overflow-hidden::before {
   left: 0;
   background: linear-gradient(to right, rgba(255, 255, 255, 1), transparent);
 }
@@ -115,7 +115,7 @@
 
 .dark .relative.overflow-hidden::after {
   background: linear-gradient(to left, rgba(17, 24, 39, 1), transparent);
-}
+} */
 
 /* Instructional Text Styling */
 .text-sm.italic {

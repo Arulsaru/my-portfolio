@@ -17,7 +17,6 @@
   align-items: center;
   gap: 0.5rem;
   background-color: #e2e8f0;
-  color: #374151;
   padding: 0.5rem 1rem;
   border-radius: 999px;
   font-size: 0.875rem;
@@ -51,14 +50,12 @@
 }
 
 .card:hover {
-  /* background-color: #cbd5e1; */
   transition: background-color 0.3s ease-in-out;
   cursor: pointer;
   transform: scale(1.02); 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
 }
 
-/* Icon Styling */
 .chip img {
   width: 1.2rem;
   height: 1.2rem;

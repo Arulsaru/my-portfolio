@@ -7,6 +7,7 @@ import { ExperiencesComponent } from './pages/experiences/experiences.component'
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { CertificationsComponent } from './pages/certifications/certifications.component';
+import { BeyondWorkComponent } from './pages/beyond-work/beyond-work.component';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { CertificationsComponent } from './pages/certifications/certifications.c
     HomeComponent,
     AboutComponent,
     CertificationsComponent,
+    BeyondWorkComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
