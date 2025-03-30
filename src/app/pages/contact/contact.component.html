@@ -1,17 +1,13 @@
 <section
   id="contact"
-  class="py-16 px-6 md:px-10 lg:px-10 bg-white dark:bg-gray-900 text-black dark:text-white"
+  class="scroll-mt-24 py-20 px-6 md:px-10 lg:px-10 bg-white dark:bg-gray-900 text-black dark:text-white"
 >
   <div
     class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start"
   >
-    <!-- Left Side: Title & Info -->
+    <!-- Left: Contact Info -->
     <div>
-      <h2
-        class="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white"
-      >
-        📬 Contact Me
-      </h2>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">📬 Contact Me</h2>
       <p
         class="text-md md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mt-10"
       >
@@ -20,23 +16,20 @@
         developer, startup founder, or recruiter, let's get in touch!
       </p>
 
-      <!-- Instructional Text -->
       <p class="text-sm text-gray-700 dark:text-gray-300 mt-4 italic">
         Fill out the form and I’ll get back to you as soon as I can.
       </p>
 
-      <!-- Contact Info (Optional) -->
+      <!-- Info Grid -->
       <div
-        class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-12 text-sm text-gray-800 dark:text-gray-200"
+        class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-10 text-sm text-gray-800 dark:text-gray-200"
       >
-        <!-- Left Column -->
         <div class="flex items-center gap-3">
           <span class="text-xl">📧</span>
-          <a href="mailto:saruarul154@gmail.com" class="hover:underline">{{
-            email
-          }}</a>
+          <a href="mailto:saruarul154@gmail.com" class="hover:underline">
+            {{ email }}
+          </a>
         </div>
-
         <div class="flex items-center gap-3">
           <span class="text-xl">🔗</span>
           <a
@@ -47,26 +40,23 @@
             LinkedIn Profile
           </a>
         </div>
-
-        <!-- Left Column -->
         <div class="flex items-center gap-3">
           <span class="text-xl">📍</span>
           <span>Coimbatore, Tamil Nadu</span>
         </div>
-
         <div class="flex items-center gap-3">
           <span class="text-xl">📱</span>
           <span>+91 98765 43210</span>
         </div>
       </div>
 
-      <!-- ✨ Fun Quote -->
-      <div class="pt-14 italic text-gray-700 dark:text-gray-400">
+      <!-- Fun Quote -->
+      <div class="pt-10 italic text-gray-700 dark:text-gray-400">
         “The only way to do great work is to love what you do – Steve Jobs 🚀”
       </div>
 
-      <!-- 🔥 Personal Tags -->
-      <div class="flex flex-wrap gap-2 pt-8">
+      <!-- Tags -->
+      <div class="flex flex-wrap gap-2 pt-6">
         <span
           class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-medium"
         >
@@ -100,13 +90,11 @@
       </div>
     </div>
 
-    <!-- Right Side: Contact Form -->
-    <!-- Right Side: Contact Form (Revamped) -->
+    <!-- Right: Contact Form -->
     <div
       class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-xl shadow-lg p-8 transition-all duration-300"
     >
       <form (submit)="onSubmit()" #contactForm="ngForm" class="space-y-6">
-        <!-- Heading -->
         <div>
           <h3
             class="text-xl font-semibold mb-1 text-gray-800 dark:text-gray-200"
@@ -119,75 +107,67 @@
         </div>
 
         <!-- Name -->
-        <div class="flex flex-col gap-1">
-          <input
-            type="text"
-            id="name"
-            name="name"
-            [(ngModel)]="formData.name"
-            required
-            placeholder="Your Name"
-            class="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:border-blue-400 transition-all duration-300"
-          />
-        </div>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="formData.name"
+          required
+          placeholder="Your Name"
+          class="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:border-blue-400 transition-all duration-300"
+        />
 
         <!-- Email -->
-        <div class="flex flex-col gap-1">
-          <input
-            type="email"
-            id="email"
-            name="email"
-            [(ngModel)]="formData.email"
-            required
-            placeholder="Your Email"
-            class="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:border-blue-400 transition-all duration-300"
-          />
-        </div>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="formData.email"
+          required
+          placeholder="Your Email"
+          class="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:border-blue-400 transition-all duration-300"
+        />
 
         <!-- Message -->
-        <div class="flex flex-col gap-1">
-          <textarea
-            id="message"
-            name="message"
-            [(ngModel)]="formData.message"
-            required
-            placeholder="Your Message"
-            rows="5"
-            class="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:border-blue-400 transition-all duration-300"
-          ></textarea>
-        </div>
+        <textarea
+          id="message"
+          name="message"
+          [(ngModel)]="formData.message"
+          required
+          placeholder="Your Message"
+          rows="5"
+          class="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:border-blue-400 transition-all duration-300"
+        ></textarea>
 
         <!-- Submit Button -->
-        <div class="pt-2">
-          <button
-            type="submit"
-            [disabled]="!contactForm.valid || loading"
-            class="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md shadow-md transition-all duration-300 disabled:opacity-50 flex items-center justify-center gap-2"
+        <button
+          type="submit"
+          [disabled]="!contactForm.valid || loading"
+          class="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md shadow-md transition-all duration-300 disabled:opacity-50 flex items-center justify-center gap-2"
+        >
+          <svg
+            *ngIf="loading"
+            class="animate-spin h-5 w-5 text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
           >
-            <svg
-              *ngIf="loading"
-              class="animate-spin h-5 w-5 text-white"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <circle
-                class="opacity-25"
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="currentColor"
-                stroke-width="4"
-              ></circle>
-              <path
-                class="opacity-75"
-                fill="currentColor"
-                d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-              ></path>
-            </svg>
-            <span>{{ loading ? "Sending..." : "🚀 Send Message" }}</span>
-          </button>
-        </div>
+            <circle
+              class="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              stroke-width="4"
+            />
+            <path
+              class="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+            />
+          </svg>
+          <span>{{ loading ? "Sending..." : "🚀 Send Message" }}</span>
+        </button>
       </form>
     </div>
   </div>

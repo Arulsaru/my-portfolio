@@ -1,31 +1,31 @@
 <section
   id="certifications"
-  class="py-16 px-6 md:px-10 lg:px-10 bg-white dark:bg-gray-900"
+  class="scroll-mt-24 py-20 px-6 md:px-10 lg:px-10 bg-white dark:bg-gray-900"
 >
   <div
-    class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start"
+    class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start"
   >
-    <!-- Left Side: Title & Description -->
+    <!-- Left Side -->
     <div>
       <h2
-        class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-200 mb-7"
+        class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-200 mb-6"
       >
         📜 Certifications
       </h2>
       <p
-        class="text-md md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed"
+        class="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed"
       >
         These certifications represent my dedication to continuous learning and
         expertise in various technologies. They reflect my ability to adapt to
         new challenges and stay updated with industry trends.
       </p>
 
-      <!-- Instructional Text -->
+      <!-- Instruction -->
       <p class="text-sm text-gray-700 dark:text-gray-300 mt-4 italic">
         Click on each title to view the certificate.
       </p>
 
-      <!-- Certification List (Two Columns Handled via CSS) -->
+      <!-- List of Certifications -->
       <div class="cert-list-grid mt-6">
         <div
           *ngFor="let organization of getUniqueOrganizations()"
@@ -37,26 +37,25 @@
           <ul class="list-disc ml-6 mt-3">
             <li
               *ngFor="let cert of getCertificationsByOrg(organization)"
-              class="text-md text-gray-900 dark:text-gray-300"
+              class="text-sm sm:text-base text-gray-900 dark:text-gray-300 mt-1"
             >
               <a
                 *ngIf="cert.pdf"
                 [href]="cert.pdf"
                 target="_blank"
-                class="cert-link"
+                class="cert-link hover:underline text-blue-600 dark:text-blue-400"
               >
                 {{ cert.title }}
               </a>
               <span *ngIf="!cert.pdf">{{ cert.title }}</span>
-              <!-- Show as plain text if no PDF -->
             </li>
           </ul>
         </div>
       </div>
     </div>
 
-    <!-- Right Side: Infinite Horizontal Scrolling Slider -->
-    <div class="relative overflow-hidden">
+    <!-- Right Side: Scrolling Cards -->
+    <div class="relative overflow-hidden mt-10 lg:mt-0">
       <div class="scrolling-wrapper">
         <div class="scrolling-content">
           <ng-container

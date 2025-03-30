@@ -1,25 +1,25 @@
 <section
   id="experience"
-  class="py-16 px-6 md:px-10 lg:px-10 bg-white dark:bg-gray-900"
+  class="scroll-mt-24 py-20 px-6 md:px-10 lg:px-10 bg-white dark:bg-gray-900"
 >
   <div
-    class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+    class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-14 items-start"
   >
-    <!-- Left Side: Title, Intro & Experience Card -->
+    <!-- Left Side -->
     <div>
       <h2
-        class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-200 mb-7"
+        class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-200 mb-6"
       >
         📌 Experience
       </h2>
       <p
-        class="text-md md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-7"
+        class="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6"
       >
-        An overview of my work experience, Click on each role to view the impact
+        An overview of my work experience. Click on each role to view the impact
         I made.
       </p>
 
-      <!-- Company Name with Logo -->
+      <!-- Company Name -->
       <div class="mt-4 flex items-center gap-3">
         <img
           src="/assets/trustrace-logo.png"
@@ -31,15 +31,17 @@
         </h3>
       </div>
 
-      <!-- Experience Card (Left Side) -->
+      <!-- Company Description & Tabs -->
       <div class="mt-6">
         <p
-          class="text-md md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-7"
+          class="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6"
         >
           TrusTrace is a traceability and compliance data management platform
           that automates the collection and validation of real-time granular
           data direct from the supplier network on how products have been made.
         </p>
+
+        <!-- Tabs -->
         <div class="tabs flex flex-wrap gap-3">
           @for (role of experiences; track role) {
           <button
@@ -54,9 +56,9 @@
       </div>
     </div>
 
-    <!-- Right Side: Experience Details (Centered Vertically) -->
+    <!-- Right Side: Experience Card -->
     <div
-      class="card bg-gray-100 dark:bg-gray-800 p-5 rounded-lg shadow-md mt-16"
+      class="card bg-gray-100 dark:bg-gray-800 p-5 rounded-lg shadow-md md:mt-0 mt-10 w-full"
     >
       <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-300">
         {{ experiences[selectedIndex].title }}
@@ -65,9 +67,8 @@
         {{ experiences[selectedIndex].duration }}
       </p>
 
-      <!-- Unordered List for Bullet Points -->
       <ul
-        class="list-disc list-inside mt-3 text-md text-gray-700 dark:text-gray-300"
+        class="list-disc list-inside mt-3 text-base text-gray-700 dark:text-gray-300 space-y-1"
       >
         @for (point of experiences[selectedIndex].description; track point) {
         <li>{{ point }}</li>

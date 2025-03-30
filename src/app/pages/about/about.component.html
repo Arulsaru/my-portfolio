@@ -3,18 +3,18 @@
   class="py-16 px-6 md:px-10 lg:px-10 bg-white dark:bg-gray-900"
 >
   <div
-    class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start"
+    class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-start"
   >
-    <!-- Left Side: Summary & Education -->
+    <!-- Left Side -->
     <div>
       <h2
-        class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-200 mb-7"
+        class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-200 mb-6"
       >
         About Me
       </h2>
 
       <p
-        class="text-md md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed"
+        class="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed"
       >
         A passionate full-stack developer, explorer who loves learning,
         adapting, and taking on new challenges. My journey is all about
@@ -22,7 +22,7 @@
         beyond just technology.
       </p>
 
-      <!-- Education Section -->
+      <!-- Education -->
       <div class="mt-10">
         <h3
           class="text-2xl font-semibold text-gray-900 dark:text-gray-200 mb-4"
@@ -30,7 +30,9 @@
           🎓 Education
         </h3>
 
-        <div class="card bg-gray-100 dark:bg-gray-800 p-5 rounded-lg shadow-md">
+        <div
+          class="card bg-gray-100 dark:bg-gray-800 p-5 rounded-lg shadow-md w-full"
+        >
           <h4 class="text-lg font-semibold text-gray-800 dark:text-gray-300">
             Bachelor's Degree in ECE
           </h4>
@@ -41,106 +43,90 @@
       </div>
     </div>
 
-    <!-- Right Side: Technical Skills (Two Column Layout) -->
+    <!-- Right Side -->
     <div>
       <h3
-        class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-200 mb-7"
+        class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-200 mb-6"
       >
         Technical Skills
       </h3>
 
-      <!-- Two Column Layout for Frontend & Backend -->
+      <!-- Frontend + Backend Skills -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Frontend Skills -->
+        <!-- Frontend -->
         <div>
           <h4
-            class="text-lg font-semibold text-gray-800 dark:text-gray-300 mb-5"
+            class="text-lg font-semibold text-gray-800 dark:text-gray-300 mb-4"
           >
             🎨 Frontend Development
           </h4>
           <div class="flex flex-wrap gap-3">
-            <span class="chip">
-              <img src="/assets/icons/html.svg" class="icon" alt="HTML" /> HTML
-            </span>
-            <span class="chip">
-              <img src="/assets/icons/css.svg" class="icon" alt="CSS" /> CSS
-            </span>
-            <span class="chip">
-              <img
-                src="/assets/icons/javascript.svg"
-                class="icon"
-                alt="JavaScript"
-              />
-              JavaScript
-            </span>
-            <span class="chip">
-              <img
-                src="/assets/icons/typescript.svg"
-                class="icon"
-                alt="TypeScript"
-              />
-              TypeScript
-            </span>
-            <span class="chip">
-              <img src="/assets/icons/angular.svg" class="icon" alt="Angular" />
-              Angular
-            </span>
-            <span class="chip">
-              <img src="/assets/icons/nodejs.svg" class="icon" alt="NodeJs" />
-              Node JS
-            </span>
+            <span class="chip"
+              ><img src="/assets/icons/html.svg" class="icon" /> HTML</span
+            >
+            <span class="chip"
+              ><img src="/assets/icons/css.svg" class="icon" /> CSS</span
+            >
+            <span class="chip"
+              ><img src="/assets/icons/javascript.svg" class="icon" />
+              JavaScript</span
+            >
+            <span class="chip"
+              ><img src="/assets/icons/typescript.svg" class="icon" />
+              TypeScript</span
+            >
+            <span class="chip"
+              ><img src="/assets/icons/angular.svg" class="icon" />
+              Angular</span
+            >
+            <span class="chip"
+              ><img src="/assets/icons/nodejs.svg" class="icon" /> Node JS</span
+            >
           </div>
         </div>
 
-        <!-- Backend Skills -->
+        <!-- Backend -->
         <div>
           <h4
-            class="text-lg font-semibold text-gray-800 dark:text-gray-300 mb-5"
+            class="text-lg font-semibold text-gray-800 dark:text-gray-300 mb-4"
           >
             🖥️ Backend Development
           </h4>
           <div class="flex flex-wrap gap-3">
-            <span class="chip">
-              <img src="/assets/icons/java.svg" class="icon" alt="Java" /> Java
-            </span>
-            <span class="chip">
-              <img
-                src="/assets/icons/springboot.svg"
-                class="icon"
-                alt="Spring Boot"
-              />
-              Spring Boot
-            </span>
-            <span class="chip">
-              <img src="/assets/icons/mongodb.svg" class="icon" alt="MongoDB" />
-              Mongo DB
-            </span>
+            <span class="chip"
+              ><img src="/assets/icons/java.svg" class="icon" /> Java</span
+            >
+            <span class="chip"
+              ><img src="/assets/icons/springboot.svg" class="icon" /> Spring
+              Boot</span
+            >
+            <span class="chip"
+              ><img src="/assets/icons/mongodb.svg" class="icon" /> Mongo
+              DB</span
+            >
           </div>
         </div>
       </div>
 
-      <!-- Other Tools (Common Section Below) -->
+      <!-- Other Tools -->
       <h4
-        class="text-lg font-semibold text-gray-800 dark:text-gray-300 mt-10 mb-5"
+        class="text-lg font-semibold text-gray-800 dark:text-gray-300 mt-10 mb-4"
       >
         🔧 Other Tools
       </h4>
       <div class="flex flex-wrap gap-3">
-        <span class="chip">
-          <img src="/assets/icons/docker.svg" class="icon" alt="Docker" />
-          Docker
-        </span>
-        <span class="chip">
-          <img src="/assets/icons/git.svg" class="icon" alt="Git" /> Git
-        </span>
-        <span class="chip">
-          <img src="/assets/icons/github.svg" class="icon" alt="GitHub" />
-          GitHub
-        </span>
-        <span class="chip">
-          <img src="/assets/icons/jenkins.svg" class="icon" alt="Jenkins" />
-          Jenkins
-        </span>
+        <span class="chip"
+          ><img src="/assets/icons/docker.svg" class="icon" /> Docker</span
+        >
+        <span class="chip"
+          ><img src="/assets/icons/git.svg" class="icon" /> Git</span
+        >
+        <span class="chip"
+          ><img src="/assets/icons/github.svg" class="icon" /> GitHub</span
+        >
+        <span class="chip"
+          ><img src="/assets/icons/jenkins.svg" class="icon" /> Jenkins</span
+        >
       </div>
     </div>
   </div>

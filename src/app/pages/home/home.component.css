@@ -1,17 +1,23 @@
 section {
   position: relative;
-  background-size: contain;  /* Ensure the entire image fits */
-  background-position: left top;  /* Align to the top-left */
+  background-size: contain;
+  background-position: left top;
   background-repeat: no-repeat;
   width: 100vw;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  overflow: hidden;
   padding: 5rem 2rem;
-  overflow: hidden; /* Prevents any unwanted cropping */
 }
 
+@media (max-width: 768px) {
+  section {
+    padding: 4rem 1.5rem;
+    justify-content: center;
+  }
+}
 
 h1 {
   letter-spacing: 1px;
@@ -44,7 +50,6 @@ p {
   }
 }
 
-/* Applied to Tailwind classes */
 .animate-slideIn {
   animation: slideIn 1s ease-in-out forwards;
 }
@@ -52,4 +57,3 @@ p {
 .animate-fadeIn {
   animation: fadeIn 1s ease-in-out forwards;
 }
-

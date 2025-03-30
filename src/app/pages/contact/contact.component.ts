@@ -24,9 +24,12 @@ export class ContactComponent {
   onSubmit(): void {
     this.loading = true;
 
-    const serviceID = 'service_c7neqo1';
-    const templateID = 'template_dbpjekm';
-    const publicKey = 'PybH4OD4pFvsK9pGb';
+    // const serviceID = 'service_c7neqo1';
+    // const templateID = 'template_dbpjekm';
+    // const publicKey = 'PybH4OD4pFvsK9pGb';
+    const serviceID = 'sad';
+    const templateID = 'asd';
+    const publicKey = 'adsad';
 
     const templateParams = {
       from_name: this.formData.name,

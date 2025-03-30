@@ -1,17 +1,11 @@
-/* Two-Column Grid for Skills */
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
+/* Responsive Grid Helper */
 @media (min-width: 768px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-/* Chip Styling */
+/* Chips */
 .chip {
   display: inline-flex;
   align-items: center;
@@ -21,8 +15,13 @@
   border-radius: 999px;
   font-size: 0.875rem;
   font-weight: 500;
-  transition: background-color 0.3s ease-in-out;
-  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  cursor: default;
+}
+
+.chip:hover {
+  transform: scale(1.05);
+  background-color: #cbd5e1;
 }
 
 .dark .chip {
@@ -30,33 +29,21 @@
   color: #e5e7eb;
 }
 
-.chip:hover {
-  background-color: #cbd5e1;
-    transform: scale(1.05);
-
-  transition: all 0.3s ease;
-}
-
 .dark .chip:hover {
-  background-color: #6b7280;  
-    transform: scale(1.05);
-
-
-  transition: all 0.3s ease;
-}
-
-.card {
-  width: 90%;
-}
-
-.card:hover {
-  transition: background-color 0.3s ease-in-out;
-  cursor: pointer;
-  transform: scale(1.02); 
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+  background-color: #6b7280;
 }
 
 .chip img {
   width: 1.2rem;
   height: 1.2rem;
+}
+
+/* Card */
+.card {
+  width: 100%; /* changed from 90% for responsiveness */
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
