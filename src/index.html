@@ -9,5 +9,18 @@
   </head>
   <body>
     <app-root></app-root>
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4P6LJHCTKF"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-4P6LJHCTKF");
+    </script>
   </body>
 </html>
