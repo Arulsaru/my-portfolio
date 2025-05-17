@@ -16,30 +16,34 @@ export class ExperiencesComponent {
   experiences = [
     {
       title: 'Full Stack Developer',
-      duration: 'Jun 2023 - Present',
+      duration: '🗓️ Jun 2023 – Present',
       description: [
-        'Engaged in end-to-end development life cycle seamlessly integrating Angular for the frontend, Spring Boot for backend, and MongoDB for efficient data storage.',
-        'Collaborated with cross-functional teams, including designers and QA engineers, to ensure the successful delivery of high-quality software within project timelines.',
-        'Committed to fostering professional growth through mentorship.',
+        'Developed and maintained scalable web applications using <strong>Angular</strong>, <strong>Spring Boot</strong>, and <strong>MongoDB</strong>.',
+        'Delivered features from UI implementation to backend logic and data modeling.',
+        'Collaborated with cross-functional teams to ship clean, user-friendly features within <strong>Agile Sprints</strong>.',
+        '<strong>Mentored junior developers</strong> on best practices and team workflows.',
+        'Contributed to performance tuning, bug fixes, and <strong>code reviews</strong> to maintain high quality.',
       ],
     },
     {
       title: 'On-Job Training',
-      duration: 'Mar 2023 - May 2023',
+      duration: '🗓️ Mar 2023 - May 2023',
       description: [
-        'I have been a part of the engineering team with the intention of deepening my expertise in technical aspects and enhancing practical knowledge and business cases in TrusTrace.',
-        'Engaged in the complete software development lifecycle.',
-        'Applied theoretical knowledge to real-world projects by exploring the product and business context',
-        'Engaged in debugging and troubleshooting efforts to ensure smooth project workflow and a strong base',
-        // 'Participated in Agile methodologies, contributing to sprint planning, daily stand-ups, and retrospective meetings',
+        'Joined the Engineering team at <strong>TrusTrace</strong> with a focus on deepening technical expertise and applying practical knowledge in real-world business scenarios.',
+        'Involved in the complete <strong>software development lifecycle</strong>, gaining hands-on experience across product modules.',
+        'Explored the product architecture and business logic to bridge the gap between <strong>theory and practice</strong>.',
+        'Participated in <strong>debugging</strong> and troubleshooting sessions to ensure smooth development and a stable codebase.',
+        'Contributed to sprint planning and daily team activities, aligning with <strong>Agile practices</strong> and workflows.',
       ],
     },
     {
       title: 'Software Engineer Internship',
-      duration: 'Aug 2022 - Feb 2023',
+      duration: '🗓️ Aug 2022 - Feb 2023',
       description: [
-        'Trained by an external trainer concerning software technologies along with full-stack frameworks',
-        'Familiarized with both front-end and back-end technologies by contributing to various personal and office-related projects',
+        'Underwent structured training by external mentors, gaining foundational knowledge in <strong>full-stack development</strong> and modern software practices.',
+        'Explored both <strong>frontend</strong> and <strong>backend technologies</strong> by contributing to hands-on projects within the organization.',
+        'Worked on <strong>personal and internal tools</strong>, applying newly learned concepts to real use cases.',
+        'Built core programming skills, participated in code reviews, and strengthened understanding of application architecture.',
       ],
     },
   ];

@@ -67,7 +67,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div
             *ngFor="let profile of profiles"
-            class="profile-card bg-gray-100 dark:bg-gray-800"
+            class="profile-card bg-gray-200 dark:bg-gray-800"
           >
             <div class="flex items-center gap-4">
               <img
@@ -98,7 +98,7 @@
             class="absolute top-1/2 right-[5px] -translate-y-1/2 flex flex-col gap-3 z-10 up-down-btn"
           >
             <!-- Scroll Up Button -->
-            <button
+            <!-- <button
               (click)="scrollBlogs('up')"
               class="bg-gray-200 dark:bg-gray-800 p-3 rounded-full shadow hover:bg-gray-300 dark:hover:bg-gray-700 transition"
             >
@@ -116,10 +116,10 @@
                   d="M5 15l7-7 7 7"
                 />
               </svg>
-            </button>
+            </button> -->
 
             <!-- Scroll Down Button -->
-            <button
+            <!-- <button
               (click)="scrollBlogs('down')"
               class="bg-gray-200 dark:bg-gray-800 p-3 rounded-full shadow hover:bg-gray-300 dark:hover:bg-gray-700 transition"
             >
@@ -137,7 +137,7 @@
                   d="M19 9l-7 7-7-7"
                 />
               </svg>
-            </button>
+            </button> -->
           </div>
 
           <!-- Scrollable Blog Grid (scrollbar hidden) -->
@@ -176,7 +176,7 @@
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
           <div
             *ngFor="let strength of strengths"
-            class="rounded-lg p-4 bg-gray-100 dark:bg-gray-800 shadow-md hover:scale-105 transition-transform duration-300 text-center"
+            class="rounded-lg p-4 bg-gray-200 dark:bg-gray-800 shadow-md hover:scale-105 transition-transform duration-300 text-center"
           >
             <img
               [src]="strength.icon"
@@ -195,7 +195,7 @@
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
           <div
             *ngFor="let skill of softSkills"
-            class="rounded-lg p-4 bg-gray-100 dark:bg-gray-800 shadow-md hover:scale-105 transition-transform duration-300 text-center"
+            class="rounded-lg p-4 bg-gray-200 dark:bg-gray-800 shadow-md hover:scale-105 transition-transform duration-300 text-center"
           >
             <img
               [src]="skill.icon"

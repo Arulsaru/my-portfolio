@@ -3,7 +3,6 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: #e2e8f0;
   padding: 0.5rem 1rem;
   border-radius: 999px;
   font-size: 0.875rem;
@@ -15,21 +14,8 @@
 }
 
 .chip:hover {
-  background-color: #cbd5e1;
   transform: scale(1.05);
-}
-
-.dark .chip {
-  background-color: #4b5563;
-  color: #e5e7eb;
-}
-
-.dark .chip:hover {
-  background-color: #6b7280;
-}
-
-.chip.active {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
 }
 
 /* Responsive Card */
@@ -42,4 +28,11 @@
 .card:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.active-chip {
+  background-color: #2563eb; /* Tailwind blue-600 */
+  font-weight: 600;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }

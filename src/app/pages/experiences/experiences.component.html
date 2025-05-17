@@ -5,7 +5,7 @@
   <div
     class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-14 items-start"
   >
-    <!-- Left Side -->
+    <!-- Left Side: Title & Description -->
     <div>
       <h2
         class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-200 mb-6"
@@ -15,12 +15,13 @@
       <p
         class="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6"
       >
-        An overview of my work experience. Click on each role to view the impact
-        I made.
+        A snapshot of my journey so far,
+        <span class="font-bold text-red-500 underline">click on any role</span>
+        to explore my journey and discover the value I've delivered and the
+        skills I've developed along the way
       </p>
 
-      <!-- Company Name -->
-      <div class="mt-4 flex items-center gap-3">
+      <div class="mt-10 flex items-center gap-3">
         <img
           src="/assets/trustrace-logo.png"
           alt="TrusTrace Logo"
@@ -31,26 +32,28 @@
         </h3>
       </div>
 
-      <!-- Company Description & Tabs -->
       <div class="mt-6">
         <p
-          class="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6"
+          class="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-7"
         >
           TrusTrace is a traceability and compliance data management platform
           that automates the collection and validation of real-time granular
           data direct from the supplier network on how products have been made.
         </p>
 
-        <!-- Tabs -->
-        <div class="tabs flex flex-wrap gap-3">
+        <div class="tabs flex flex-wrap gap-4">
           @for (role of experiences; track role) {
           <button
             (click)="selectedIndex = experiences.indexOf(role)"
-            [class.active]="selectedIndex === experiences.indexOf(role)"
-            class="chip"
+            [ngClass]="{
+              'active-chip': selectedIndex === experiences.indexOf(role),
+              'inactive-chip': selectedIndex !== experiences.indexOf(role)
+            }"
+            class="chip transition-all duration-300 bg-gray-200"
           >
             {{ role.title }}
           </button>
+
           }
         </div>
       </div>
@@ -58,20 +61,20 @@
 
     <!-- Right Side: Experience Card -->
     <div
-      class="card bg-gray-100 dark:bg-gray-800 p-5 rounded-lg shadow-md md:mt-0 mt-10 w-full"
+      class="card bg-gray-200 dark:bg-gray-800 p-5 rounded-lg shadow-md md:mt-0 mt-10 w-full"
     >
-      <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-300">
+      <h3 class="text-lg font-bold text-gray-800 dark:text-gray-300">
         {{ experiences[selectedIndex].title }}
       </h3>
-      <p class="text-sm text-gray-600 dark:text-gray-400">
+      <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
         {{ experiences[selectedIndex].duration }}
       </p>
 
       <ul
-        class="list-disc list-inside mt-3 text-base text-gray-700 dark:text-gray-300 space-y-1"
+        class="list-disc list-inside mt-7 text-base text-gray-700 dark:text-gray-300 space-y-1"
       >
         @for (point of experiences[selectedIndex].description; track point) {
-        <li>{{ point }}</li>
+        <li class="mt-1" [innerHTML]="point">{{ point }}</li>
         }
       </ul>
     </div>

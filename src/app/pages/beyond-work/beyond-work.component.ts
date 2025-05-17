@@ -40,36 +40,23 @@ export class BeyondWorkComponent {
 
   blogs = [
     {
-      title: '5 Lessons from Working at a Startup 🚀',
+      title:
+        'From Classrooms🏫 to Codebases 🧑‍💻 My Journey into Software Development 🚀',
       summary:
-        'From late-night deploys to product pivots — here’s what startup life taught me.',
-      link: 'https://medium.com/@yourprofile/your-blog-1',
+        'Life has a way of surprising us, doesn’t it? A few years ago, I was juggling biology...',
+      link: 'https://medium.com/@arulmozhi-karunagaran/from-classrooms-to-codebases-3b0aa197dcc4',
     },
     {
-      title: 'Debugging Like a Pro 🐞',
+      title: 'Review Code, Even If You’re a Junior 🐞',
       summary:
-        'Break down bugs without breaking down. Techniques that saved my dev life.',
-      link: 'https://medium.com/@yourprofile/your-blog-2',
+        'As a junior developer, I used to hesitate before reviewing PRs.. The very first time I was asked to review the code, I froze. “How am I supposed to...',
+      link: 'https://medium.com/@arulmozhi-karunagaran/review-code-even-if-youre-a-junior-93793798bc54',
     },
     {
-      title: 'Angular + Tailwind: A Match Made in Heaven 💅',
-      summary: 'Why this combo is 🔥 for building fast and beautiful UIs.',
-      link: 'https://medium.com/@yourprofile/your-blog-3',
-    },
-    {
-      title: 'Angular + Tailwind: A Match Made in Heaven 💅',
-      summary: 'Why this combo is 🔥 for building fast and beautiful UIs.',
-      link: 'https://medium.com/@yourprofile/your-blog-3',
-    },
-    {
-      title: 'Angular + Tailwind: A Match Made in Heaven 💅',
-      summary: 'Why this combo is 🔥 for building fast and beautiful UIs.',
-      link: 'https://medium.com/@yourprofile/your-blog-3',
-    },
-    {
-      title: 'Angular + Tailwind: A Match Made in Heaven 💅',
-      summary: 'Why this combo is 🔥 for building fast and beautiful UIs.',
-      link: 'https://medium.com/@yourprofile/your-blog-3',
+      title: 'ChatGPT, Copilot & Me: How AI is Saving Junior Developers! 🚀',
+      summary:
+        '“Dev life is just copying Stack Overflow answers and hoping it works.” — Everyone, at some point. 😅 Let’s be honest...',
+      link: 'https://medium.com/@arulmozhi-karunagaran/chatgpt-copilot-me-how-ai-is-saving-junior-developers-087a30f74a60',
     },
   ];
 

@@ -1,4 +1,4 @@
-import { NgIf } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import emailjs from '@emailjs/browser';
@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, NgIf],
+  imports: [FormsModule, ReactiveFormsModule, NgIf, NgClass],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css',
 })
@@ -63,4 +63,35 @@ export class ContactComponent {
         });
       });
   }
+
+  tags = [
+    {
+      name: '#TeamPlayer',
+      class: 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300',
+    },
+    {
+      name: '#FullStackDeveloper',
+      class:
+        'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300',
+    },
+    {
+      name: '#StartupJourney',
+      class:
+        'bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300',
+    },
+    {
+      name: '#AdaptableMindset',
+      class:
+        'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300',
+    },
+    {
+      name: '#CuriousMind',
+      class: 'bg-pink-100 text-pink-700 dark:bg-pink-900 dark:text-pink-300',
+    },
+    {
+      name: '#CreativeCoder',
+      class:
+        'bg-indigo-100 text-indigo-700 dark:bg-indigo-900 dark:text-indigo-300',
+    },
+  ];
 }
