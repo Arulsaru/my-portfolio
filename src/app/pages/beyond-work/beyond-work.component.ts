@@ -61,19 +61,19 @@ export class BeyondWorkComponent {
   ];
 
   strengths = [
-    { name: 'Problem Solving', icon: 'assets/strengths/problem-solving.png' },
-    { name: 'Creativity', icon: 'assets/strengths/creativity.png' },
-    { name: 'Adaptability', icon: 'assets/strengths/adaptability.png' },
-    { name: 'Time Management', icon: 'assets/strengths/time-management.png' },
+    { name: 'Problem Solving', icon: 'assets/strengths/problem-solving.webp' },
+    { name: 'Creativity', icon: 'assets/strengths/creativity.webp' },
+    { name: 'Adaptability', icon: 'assets/strengths/adaptability.webp' },
+    { name: 'Time Management', icon: 'assets/strengths/time-management.webp' },
   ];
 
   softSkills = [
-    { name: 'Communication', icon: 'assets/soft-skills/communication.png' },
-    { name: 'Teamwork', icon: 'assets/soft-skills/teamwork.png' },
-    { name: 'Leadership', icon: 'assets/soft-skills/leadership.png' },
+    { name: 'Communication', icon: 'assets/soft-skills/communication.webp' },
+    { name: 'Teamwork', icon: 'assets/soft-skills/teamwork.webp' },
+    { name: 'Leadership', icon: 'assets/soft-skills/leadership.webp' },
     {
       name: 'Critical Thinking',
-      icon: 'assets/soft-skills/critical-thinking.png',
+      icon: 'assets/soft-skills/critical-thinking.webp',
     },
   ];
 
