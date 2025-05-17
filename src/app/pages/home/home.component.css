@@ -1,8 +1,5 @@
 section {
   position: relative;
-  background-size: contain;
-  background-position: left top;
-  background-repeat: no-repeat;
   width: 100vw;
   min-height: 100vh;
   display: flex;
